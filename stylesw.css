@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+main,
+section {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fruits-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 0.28fr);
+  gap: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.head-list {
+  display: block;
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.product-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  bottom: 0;
+  width: fit-content;
+  background: hsla(0, 0%, 80%, 0.2);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  filter: saturate(1.2);
+}
+
+.fruit-container1 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.friut-quantity {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 16px;
+  color: #333;
+  padding-top: 0;
+}
+
+.btn-cart {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-cart:hover {
+  background-color: #e64a19;
+  transform: scale(1.1);
+}
+
+.shopping-cart-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  width: 80%;
+  max-width: 800px;
+  margin: 30px 0 0 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
+.cart-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cart-info {
+  font-size: 16px;
+}
+
+.cart-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.cart-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cart-buttons button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: fit-content;
+  text-align: center;
+  min-width: 40px;
+}
+
+.cart-buttons button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+.cart-summary {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 250px;
+  margin-left: auto;
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  height: auto;
+  text-align: center;
+}
+
+/* Checkout Heading */
+.cart-summary .checkout {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Cart Total Text */
+.cart-summary p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.form-submit {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.form-submit label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.form-submit input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  width: 100%;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.form-submit button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-submit button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Receipt Section */
+.receipt-head {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 2px solid #ddd;
+  margin-top: 15px;
+}
+
+.receipt-list {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  padding: 5px 0;
+}
